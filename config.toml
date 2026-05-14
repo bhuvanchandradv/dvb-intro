@@ -1,96 +1,72 @@
-baseurl             = "/" # Must end with /
-languageCode        = "en-us"
-title               = "Introduction"
-theme               = "hugo-theme-introduction"
-enforce_ssl         = "your-url.com"
-builddrafts         = false
-canonifyurls        = true
-contentdir          = "content"
-layoutdir           = "layouts"
-publishdir          = "public"
-
-[permalinks]
-fixed = ":title/"
-blog  = "blog/:slug/"
+baseURL       = "https://bhuvanchandradv.github.io/"
+languageCode  = "en-us"
+title         = "Bhuvan Chandra DV"
+theme         = "PaperMod"
+[pagination]
+  pagerSize = 10
 
 [params]
-author        = "Bhuvanchandra DV" # Full name shows on blog post pages
-firstname     = "Bhuvan" # First name shows in introduction on main page
-tagline       = "Linux user and developer since 2012"
-introheight   = "large" # Input either 'medium' or 'large' or 'fullheight'
-theme         = "dark" # Choose 'light' or 'dark'
-#theme         = "light" # Choose 'light' or 'dark'
-avatar        = "img/profile_pic1.jpg" # Path to image in static folder eg. img/avatar.png
-email         = "bhuvanchandradv@gmail.com" # Shows in contact section, or leave blank to omit
-localtime     = true # Show your current local time in contact section
-timezone      = "Asia/Kolkata" # Your timezone as in the TZ* column of this list: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-dateform      = "Jan 2, 2006"
-dateformfull  = "Mon Jan 2 2006 15:04:05 MST"
-cachebuster   = true # Add the current unix timestamp in query string for cache busting css assets
-description   = "Blog"
-faviconfile   = "img/fav.ico"
-highlightjs   = true # Syntax highlighting
-lang          = "en"
-footertext    = "That's all for now..." # Text to show in footer (overrides default text)
-fadein        = true # Turn on/off the fade-in effect
+  author        = "Bhuvan Chandra DV"
+  description   = "Senior Embedded Systems Engineer — Linux, Zephyr RTOS, Robotics"
+  defaultTheme  = "dark"
+  ShowReadingTime   = true
+  ShowShareButtons  = false
+  ShowPostNavLinks  = true
+  ShowBreadCrumbs   = true
+  ShowCodeCopyButtons = true
+  ShowRssButtonInSectionTermList = true
 
-showblog        = true # Show Blog section on home page
-showallposts    = true # Set 'true' to list all posts on home page, or set 'false' to link to separate blog list page
-showlatest      = true # Show latest blog post summary
-sharebuttons    = true # On post pages, show share this social buttons
+  [params.homeInfoParams]
+    Title = "Hi, I'm Bhuvan Chandra."
+    Content = """Senior Systems Engineer specialising in Mechatronics and Embedded Systems, based in Tokyo. \
+I work at [Rapyuta Robotics](https://www.rapyuta-robotics.com/) on autonomous warehouse robotics — across \
+the full embedded stack, from real-time firmware and motor control to system architecture and reliability engineering.\n\n\
+I'm on a trajectory toward Systems Architecture: thinking about how complex robotic systems fit together at scale, \
+and increasingly interested in developer tooling and AI-assisted workflows that make embedded teams more effective.\n\n\
+Before Tokyo, I built my foundation at [Toradex](https://www.toradex.com/) working across industrial embedded platforms \
+and communication protocols — and picked up upstream [Linux kernel](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/log/?qt=author&q=bhuvanchandra.dv) \
+and [U-Boot](http://git.denx.de/?p=u-boot.git&a=search&h=refs%2Fheads%2Fmaster&st=author&s=bhuvanchandra.dv) \
+contributions along the way. That background in real hardware constraints — timing, memory, determinism — still shapes \
+how I approach every problem.\n\n\
+I write about embedded systems, robotics, real-time OS internals, and the craft of building reliable systems in production."""
 
-showprojects    = true # Show Projects section on home page
+  [[params.socialIcons]]
+    name = "github"
+    url  = "https://github.com/bhuvanchandradv"
 
-# This is your projects section. Three images of the same dimensions will look the nicest. If images are omitted, text links will be shown.
-project1link    = "#"
-project1img     = "img/pet-bot.jpg"
-project1title   = "Pet Bot"
+  [[params.socialIcons]]
+    name = "linkedin"
+    url  = "https://linkedin.com/in/bhuvanchandradv"
 
-project2link    = "#"
-project2img     = "img/linux-quick-boot.jpg"
-project2title   = "Linux Quick Boot Demo"
+  [[params.socialIcons]]
+    name = "instagram"
+    url  = "https://instagram.com/bhuvanchandradv"
 
-project3link    = "#"
-project3img     = "img/spectrum-analyzer.jpg"
-project3title   = "Spectrum Analyzer"
+  [[params.socialIcons]]
+    name = "strava"
+    url  = "https://www.strava.com/athletes/5336017"
 
-project4link    = "#"
-project4img     = "img/smart-aquarium-controller.jpg"
-project4title   = "Smart Aquarium Controller"
+  [[params.socialIcons]]
+    name = "rss"
+    url  = "/index.xml"
 
-project5link    = "#"
-project5img     = "img/freertos-vf6xx_m4.jpg"
-project5title   = "FreeRTOS port for Colibri VF61 M4 Core"
+[menu]
+  [[menu.main]]
+    name       = "Blog"
+    url        = "/blog/"
+    weight     = 1
+  [[menu.main]]
+    name       = "About"
+    url        = "/about/"
+    weight     = 2
+  [[menu.main]]
+    name       = "Tags"
+    url        = "/tags/"
+    weight     = 3
+  [[menu.main]]
+    name       = "Search"
+    url        = "/search/"
+    weight     = 4
 
-project6link    = "#"
-project6img     = "img/micropython-vf6xx_m4.jpg"
-project6title   = "MicroPython port for Colibri VF61 M4 Core"
-
-#project8link    = "#"
-#project8img     = "img/project2.jpg"
-#roject8title   = "Sample8"
-
-
-# Social icons appear in introduction and contact section. Add as many more as you like.
-# Find icon names here: http://fontawesome.io/cheatsheet/
-
-[[params.social]]
-url = "https://linkedin.com/in/bhuvanchandradv"
-icon = "linkedin"
-
-[[params.social]]
-url = "https://github.com/bhuvanchandra"
-icon = "github"
-
-[[params.social]]
-url = "https://facebook.com/bhuvanchandradv"
-icon = "facebook"
-
-[[params.social]]
-url = "https://instagram.com/bhuvanchandradv"
-icon = "instagram"
-
-[[params.social]]
-url = "https://www.strava.com/athletes/5336017"
-icon = "bicycle"
-
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
