@@ -20,9 +20,9 @@
       <span class="nav-item">
         <a href="/#contact">Contact</a>
       </span>
-    {{ if .Site.RSSLink }}
+    {{ with .Site.Home.OutputFormats.Get "RSS" }}
       <span class="nav-item">
-        <a href="{{ .Site.RSSLink }}"><i class="fa fa-rss"></i></a>
+        <a href="{{ .Permalink }}"><i class="fa fa-rss"></i></a>
       </span>
     {{ end }}
     </div>

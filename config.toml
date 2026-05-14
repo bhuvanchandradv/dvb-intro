@@ -24,8 +24,8 @@ avatar        = "img/profile_pic1.jpg" # Path to image in static folder eg. img/
 email         = "bhuvanchandradv@gmail.com" # Shows in contact section, or leave blank to omit
 localtime     = true # Show your current local time in contact section
 timezone      = "Asia/Kolkata" # Your timezone as in the TZ* column of this list: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-dateform      = "Jan 1, 2017"
-dateformfull  = "Mon Jan 1 2017 15:04:05 IST"
+dateform      = "Jan 2, 2006"
+dateformfull  = "Mon Jan 2 2006 15:04:05 MST"
 cachebuster   = true # Add the current unix timestamp in query string for cache busting css assets
 description   = "Blog"
 faviconfile   = "img/fav.ico"
@@ -94,6 +94,3 @@ icon = "instagram"
 url = "https://www.strava.com/athletes/5336017"
 icon = "bicycle"
 
-[[params.social]]
-url = "https://api.whatsapp.com/send?phone=917406900063"
-icon = "whatsapp"
